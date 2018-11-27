@@ -1,0 +1,306 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-4.1.3/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-4.1.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/swiper-4.4.2/css/swiper.min.css">
+
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/swiper-4.4.2/js/swiper.min.js"></script>
+
+    <style>
+        .header-top-content {
+            max-width: 1280px;
+            margin: auto;
+            background-color: bisque;
+            height: 80px;
+        }
+
+
+        .slider,
+        .content {
+            max-width: 1280px;
+            margin: auto;
+        }
+
+        .slider {
+            min-height: 250px;
+            background-color: beige;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .swiper-container {
+            max-height: 250px;
+        }
+
+        .content {
+            min-height: 600px;
+        }
+
+        .content .content-item {
+            margin-bottom: 5px;
+        }
+
+        .content .content-item .content-item-line {
+            height: 2px;
+            border: none;
+            border-top: 2px solid #007bff;
+        }
+        .prd-card-img{
+            height: 150px;
+            width: 200px;
+        }
+
+        .content .content-item  .card{
+            margin: auto;
+        }
+        .footer {
+            margin-top: 10px;
+            padding-top: 5px;
+            height: 100px;
+            background-color: #2d3f53;
+            color: aliceblue;
+        }
+
+        .footer .footer-info-item {
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+    <style>
+        @media screen and (min-width: 1280px) {
+            .navbar-container {
+                width: 100%;
+
+            }
+            .navbar-container .navbar {
+                width: 1280px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-top d-none d-md-block d-lg-block">
+            <div class="header-top-content">
+
+            </div>
+        </div>
+        <div class="navbar-container bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-item nav-link" href="#">Features</a>
+                        <a class="nav-item nav-link" href="#">Pricing</a>
+                        <a class="nav-item nav-link" href="#">Disabled</a>
+                    </div>
+                </div>
+            </nav>
+            <div>
+    </header>
+    <div class="slider">
+        <!-- <div class="slider-content">
+            <li><img src="images/banner-18.jpg" /></li>
+        </div> -->
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        })
+    </script>
+
+
+    <div class="content" id="content">
+        <section class="c-aboutwe content-item">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                        <div class="col-md-auto">
+                                Featured1
+                        </div>
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="c-aboutwe content-item">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                        <div class="col-md-auto">
+                                Featured2
+                        </div>
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                        <div class="row">
+                                <div class="col">
+                                        <div class="card" style="width:200px;">
+                                                <div class="card-img-top prd-card-img" style="background-color:beige;"> </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col ">
+                                        <div class="card" style="width:200px;">
+                                                <div class="card-img-top prd-card-img" style="background-color:chocolate;"> </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="col">
+                                        <div class="card" style="width:200px;">
+                                                <div class="card-img-top prd-card-img" style="background-color:beige;"> </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col">
+                                        <div class="card" style="width:200px;">
+                                                <div class="card-img-top prd-card-img" style="background-color:chocolate;"> </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                </div>
+                        </div>
+                       
+                 
+                </div>
+            </div>
+        </section>
+
+        <section class="c-aboutwe content-item">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                        <div class="col-md-auto">
+                                Featured3
+                        </div>
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="c-aboutwe content-item">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                        <div class="col-md-auto">
+                                Featured4
+                        </div>
+                        <div class="col col-lg-2">
+                            <hr class="content-item-line" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="row justify-content-md-center">
+            <div class="col"></div>
+            <div class="col-md-auto">
+                <div class="footer-info-item">版权所有：******公司</div>
+                <div class="footer-info-item">电话：0512-55256621</div>
+                <div class="footer-info-item">地址：江苏省昆山市周市镇陆杨新阳西路122号</div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </footer>
+</body>
+
+</html>
